@@ -12,6 +12,15 @@
     });
   }
 
+  // Respect reduced motion: stop autoplaying videos and give people controls
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    document.querySelectorAll("video[autoplay]").forEach(function (v) {
+      v.removeAttribute("autoplay");
+      v.pause();
+      v.controls = true;
+    });
+  }
+
   var copy = document.getElementById("copy-email");
   if (copy) {
     copy.addEventListener("click", function () {
