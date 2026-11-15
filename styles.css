@@ -170,7 +170,7 @@ img { max-width: 100%; display: block; }
 
 /* About side */
 .about__side { display: grid; gap: 2rem; align-content: start; }
-.portrait { width: 9rem; aspect-ratio: 1; object-fit: cover; object-position: 50% 20%; border-radius: 4px; filter: grayscale(1); }
+.portrait { width: 9rem; height: 9rem; aspect-ratio: 1; object-fit: cover; object-position: 50% 20%; border-radius: 4px; filter: grayscale(1); }
 
 /* Case study */
 .cs-head { padding: clamp(2.5rem, 7vw, 4.5rem) var(--gutter) clamp(2rem, 4vw, 3rem); }
