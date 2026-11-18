@@ -14,6 +14,21 @@ Pete Ford's portfolio. Plain HTML and CSS, hosted on GitHub Pages. There's no bu
 - `assets/docs/` holds PDFs linked from the case studies.
 - `assets/og/` holds the social share images (1200×630).
 
+## Previewing locally
+
+```
+node serve.js
+```
+
+Then open http://localhost:8000. Pass a port as an argument (`node serve.js 3000`) if 8000 is taken.
+
+`serve.js` is a small dependency-free server that mimics GitHub Pages: it serves the clean URLs
+(`/asos-refer-a-friend` finds `asos-refer-a-friend.html`), falls back to `404.html`, and supports range
+requests so the case-study videos play. It is a dev tool only — nothing on the site links to it.
+
+Opening the HTML files straight from Finder works too, but the clean URLs between pages will 404,
+so use the server when you want to click through the site as it really behaves.
+
 ## Editing
 
 Edit the HTML directly. A change pushed to `main` goes live on GitHub Pages within a minute or two.
