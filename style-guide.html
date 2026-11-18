@@ -80,7 +80,7 @@
     <section class="cs-sec wrap" aria-labelledby="sg3">
       <div class="cs-sec__label"><span class="mono">03</span><h2 id="sg3">Type scale</h2></div>
       <div class="cs-sec__body">
-        <p class="sg-note">Five <code>--step</code> tokens, plus two sizes the case studies hard-code. Those two are marked in accent: they are the comfortable reading sizes, and they are not in the scale.</p>
+        <p class="sg-note">Six <code>--step</code> tokens, smallest to largest. Every font size in styles.css now resolves to one of these — the only exception is <code>.stat__n</code>, a one-off display size for the big Outcome numbers.</p>
 
         <div class="sg-spec">
           <p class="sg-spec__meta"><b>--step-3</b>clamp(2rem, 4.2vw, 2.875rem) · <span class="sg-px">…</span><br>.hero h1, .cs-head h1, .contact h2</p>
@@ -91,28 +91,20 @@
           <div class="sg-spec__demo"><span style="font-size: var(--step-2); font-family: var(--display); line-height: 1.3;">Product designer who builds</span></div>
         </div>
         <div class="sg-spec">
-          <p class="sg-spec__meta"><b>--step-1</b>1.125rem · <span class="sg-px">…</span><br>.lede — 404.html only</p>
-          <div class="sg-spec__demo"><span style="font-size: var(--step-1);">Product designer who builds</span></div>
-        </div>
-        <div class="sg-spec sg-spec--gap">
-          <p class="sg-spec__meta"><b>(none)</b>1.0625rem · <span class="sg-px">…</span><br>hard-coded: .cs-sec__body > p, .insight p</p>
-          <div class="sg-spec__demo"><span style="font-size: 1.0625rem; line-height: 1.65;">Product designer who builds</span></div>
-        </div>
-        <div class="sg-spec sg-spec--gap">
-          <p class="sg-spec__meta"><b>(none)</b>1rem · <span class="sg-px">…</span><br>hard-coded: .cs-sec__body > ul</p>
-          <div class="sg-spec__demo"><span style="font-size: 1rem;">Product designer who builds</span></div>
+          <p class="sg-spec__meta"><b>--step-1</b>1.125rem · <span class="sg-px">…</span><br>long-form prose: .cs-sec__body &gt; p, .insight p, .lede</p>
+          <div class="sg-spec__demo"><span style="font-size: var(--step-1); line-height: 1.65;">Product designer who builds</span></div>
         </div>
         <div class="sg-spec">
-          <p class="sg-spec__meta"><b>--step-0</b>0.9375rem · <span class="sg-px">…</span><br>body, .ledger--hero</p>
+          <p class="sg-spec__meta"><b>--step-0</b>1rem · <span class="sg-px">…</span><br>body, .ledger--hero, .cs-sec__body &gt; ul</p>
           <div class="sg-spec__demo"><span style="font-size: var(--step-0);">Product designer who builds</span></div>
         </div>
         <div class="sg-spec">
-          <p class="sg-spec__meta"><b>--step--1</b>0.8125rem · <span class="sg-px">…</span><br>nav, ledgers, captions, footer, .btn, .tldr dd</p>
+          <p class="sg-spec__meta"><b>--step--1</b>0.875rem · <span class="sg-px">…</span><br>nav, ledgers, captions, footer, .btn, .tldr dd</p>
           <div class="sg-spec__demo"><span style="font-size: var(--step--1);">Product designer who builds</span></div>
         </div>
         <div class="sg-spec">
-          <p class="sg-spec__meta"><b>.mono</b>0.75rem · <span class="sg-px">…</span><br>eyebrows, section numbers, labels</p>
-          <div class="sg-spec__demo"><span style="font-size: .75rem; font-family: var(--mono);">Product designer who builds</span></div>
+          <p class="sg-spec__meta"><b>--step--2</b>0.75rem · <span class="sg-px">…</span><br>eyebrows, section numbers, small labels</p>
+          <div class="sg-spec__demo"><span style="font-size: var(--step--2); font-family: var(--mono);">Product designer who builds</span></div>
         </div>
       </div>
     </section>

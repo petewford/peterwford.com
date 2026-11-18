@@ -13,8 +13,9 @@
   --body: "Geist", "Helvetica Neue", Arial, sans-serif;
   --mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
-  --step--1: 0.8125rem;
-  --step-0: 0.9375rem;
+  --step--2: 0.75rem;
+  --step--1: 0.875rem;
+  --step-0: 1rem;
   --step-1: 1.125rem;
   --step-2: 1.5rem;
   --step-3: clamp(2rem, 4.2vw, 2.875rem);
@@ -117,7 +118,7 @@ img { max-width: 100%; display: block; }
   font-size: var(--step--1); color: var(--muted);
 }
 .section__head h2 { font: inherit; color: var(--ink); margin: 0; }
-.mono { font-family: var(--mono); font-size: .75rem; letter-spacing: .01em; }
+.mono { font-family: var(--mono); font-size: var(--step--2); letter-spacing: .01em; }
 
 /* Work plates */
 .work { display: grid; gap: clamp(2.5rem, 5vw, 3.5rem); list-style: none; margin: 0; padding: 0; }
@@ -162,7 +163,7 @@ img { max-width: 100%; display: block; }
 /* Footer */
 .footer { border-top: 1px solid var(--rule); margin-top: clamp(3rem, 6vw, 5rem); }
 .footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding-top: 1.5rem; padding-bottom: 2.5rem; font-size: var(--step--1); color: var(--muted); }
-.footer ul { display: flex; gap: 1.25rem; list-style: none; margin: 0; padding: 0; }
+.footer ul { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; list-style: none; margin: 0; padding: 0; }
 .footer a { text-decoration: none; }
 
 /* Skip link */
@@ -190,7 +191,7 @@ img { max-width: 100%; display: block; }
 
 .tldr { padding-top: clamp(2.5rem, 5vw, 3.5rem); padding-bottom: clamp(1rem, 3vw, 2rem); }
 .tldr__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem 2rem; margin: 0; border-top: 1px solid var(--ink); padding-top: 1.25rem; }
-.tldr__grid dt { font-family: var(--mono); font-size: .75rem; color: var(--accent); margin-bottom: .5rem; }
+.tldr__grid dt { font-family: var(--mono); font-size: var(--step--2); color: var(--accent); margin-bottom: .5rem; }
 .tldr__grid dd { margin: 0; font-size: var(--step--1); line-height: 1.55; }
 
 .cs-sec { display: grid; grid-template-columns: minmax(0, 13rem) minmax(0, 1fr); gap: 1rem 3rem; padding-top: clamp(2.5rem, 6vw, 4.5rem); padding-bottom: 0; }
@@ -199,15 +200,15 @@ img { max-width: 100%; display: block; }
 .cs-sec__label h2 { font-family: var(--display); font-weight: 400; font-size: var(--step-2); letter-spacing: -.01em; margin: .35rem 0 0; }
 .cs-sec__body { border-top: 1px solid var(--rule); padding-top: 1rem; min-width: 0; }
 .cs-sec__body > p, .cs-sec__body > ul, .cs-sec__body > h3, .cs-sec__body > .insight { max-width: 40rem; }
-.cs-sec__body > p { margin: 0 0 1.1em; font-size: 1.0625rem; line-height: 1.65; }
+.cs-sec__body > p { margin: 0 0 1.1em; font-size: var(--step-1); line-height: 1.65; }
 .cs-sec__body > h3 { font-family: var(--display); font-weight: 400; font-size: var(--step-2); line-height: 1.25; letter-spacing: -.01em; margin: 3rem 0 .75rem; text-wrap: balance; }
 .cs-sec__body > h3:first-child { margin-top: .25rem; }
-.cs-sec__body > ul { margin: 0 0 1.5em; padding-left: 1.1rem; display: grid; gap: .5rem; font-size: 1rem; }
+.cs-sec__body > ul { margin: 0 0 1.5em; padding-left: 1.1rem; display: grid; gap: .5rem; font-size: var(--step-0); }
 .cs-sec__body > ul li::marker { color: var(--muted); }
 
 .insight { margin: 1.75rem 0 2rem; padding: 1.1rem 1.25rem 1.2rem; border-left: 2px solid var(--accent); background: color-mix(in srgb, var(--accent) 6%, transparent); border-radius: 0 4px 4px 0; }
-.insight p { margin: 0; font-size: 1.0625rem; line-height: 1.6; }
-.insight .insight__label { font-size: .75rem; color: var(--accent); margin-bottom: .4rem; }
+.insight p { margin: 0; font-size: var(--step-1); line-height: 1.6; }
+.insight .insight__label { font-size: var(--step--2); color: var(--accent); margin-bottom: .4rem; }
 
 .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 1.5rem; margin: .5rem 0 2rem; max-width: 40rem; }
 .stat { display: grid; gap: .25rem; }
@@ -267,22 +268,21 @@ img { max-width: 100%; display: block; }
 .sg-swatch { display: grid; gap: .55rem; margin: 0; }
 .sg-swatch__chip { height: 4.5rem; border-radius: 4px; border: 1px solid var(--rule); }
 .sg-swatch__name { font-size: var(--step--1); line-height: 1.4; }
-.sg-swatch__token { display: block; font-family: var(--mono); font-size: .75rem; color: var(--muted); }
+.sg-swatch__token { display: block; font-family: var(--mono); font-size: var(--step--2); color: var(--muted); }
 
 .sg-spec { display: grid; grid-template-columns: minmax(0, 11rem) minmax(0, 1fr); gap: .5rem 2rem; align-items: baseline; border-top: 1px solid var(--rule); padding-block: 1.15rem; }
 .sg-spec:last-child { border-bottom: 1px solid var(--rule); }
-.sg-spec__meta { font-family: var(--mono); font-size: .75rem; color: var(--muted); line-height: 1.5; }
+.sg-spec__meta { font-family: var(--mono); font-size: var(--step--2); color: var(--muted); line-height: 1.5; }
 .sg-spec__meta b { display: block; font-weight: 400; color: var(--ink); }
 .sg-spec__demo { min-width: 0; overflow-wrap: anywhere; }
-.sg-spec--gap .sg-spec__meta b { color: var(--accent); }
 
 .sg-demo { border: 1px dashed var(--rule); border-radius: 4px; padding: clamp(1rem, 3vw, 1.75rem); margin: 0 0 1.5rem; }
 .sg-demo > :first-child { margin-top: 0; }
 .sg-note { font-size: var(--step--1); color: var(--muted); max-width: 48ch; margin: 0 0 1.5rem; }
-.sg-note code, .sg-inline-token { font-family: var(--mono); font-size: .75rem; color: var(--accent); }
+.sg-note code, .sg-inline-token { font-family: var(--mono); font-size: var(--step--2); color: var(--accent); }
 
 .sg-bar { background: color-mix(in srgb, var(--accent) 20%, transparent); border-left: 2px solid var(--accent); height: 1.1rem; border-radius: 0 2px 2px 0; }
-.sg-space { display: grid; grid-template-columns: minmax(0, 7rem) minmax(0, 1fr); gap: .4rem 1.25rem; align-items: center; font-family: var(--mono); font-size: .75rem; color: var(--muted); }
+.sg-space { display: grid; grid-template-columns: minmax(0, 7rem) minmax(0, 1fr); gap: .4rem 1.25rem; align-items: center; font-family: var(--mono); font-size: var(--step--2); color: var(--muted); }
 
 @media (max-width: 760px) {
   .sg-spec { grid-template-columns: 1fr; gap: .35rem; }
