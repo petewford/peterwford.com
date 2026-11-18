@@ -233,33 +233,6 @@ img { max-width: 100%; display: block; }
 
 .next { padding-top: clamp(4rem, 8vw, 6rem); }
 
-@media (max-width: 960px) {
-  .cs-sec { grid-template-columns: 1fr; gap: 0; }
-  .cs-sec__label { position: static; }
-  .cs-sec__body { border-top: 0; padding-top: .75rem; }
-  .fig { margin-left: 0; }
-  .tldr__grid { grid-template-columns: 1fr 1fr; }
-  .fig--4 .fig__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-
-@media (max-width: 760px) {
-  .ledger { grid-template-columns: 1fr 1fr; }
-  .builds { grid-template-columns: 1fr; }
-  .about { grid-template-columns: 1fr; }
-  .nav__links { gap: 1rem; }
-}
-@media (max-width: 760px) {
-  .cs-head .ledger { grid-template-columns: 1fr 1fr; }
-  .ledger--hero { grid-template-columns: 1fr; row-gap: 1.25rem; }
-  .ledger--hero .line { display: inline; }
-}
-@media (max-width: 420px) {
-  .ledger, .cs-head .ledger { grid-template-columns: 1fr; }
-  .tldr__grid { grid-template-columns: 1fr; }
-  .fig--3 .fig__grid { grid-template-columns: 1fr; }
-  .plate__cap { flex-direction: column; gap: .15rem; }
-}
-
 /* ---------------------------------------------------------------
    Style guide (internal reference page, /style-guide)
    Layout only: every value below comes from the tokens above.
@@ -284,7 +257,30 @@ img { max-width: 100%; display: block; }
 .sg-bar { background: color-mix(in srgb, var(--accent) 20%, transparent); border-left: 2px solid var(--accent); height: 1.1rem; border-radius: 0 2px 2px 0; }
 .sg-space { display: grid; grid-template-columns: minmax(0, 7rem) minmax(0, 1fr); gap: .4rem 1.25rem; align-items: center; font-family: var(--mono); font-size: var(--step--2); color: var(--muted); }
 
+@media (max-width: 960px) {
+  .cs-sec { grid-template-columns: 1fr; gap: 0; }
+  .cs-sec__label { position: static; }
+  .cs-sec__body { border-top: 0; padding-top: .75rem; }
+  .fig { margin-left: 0; }
+  .tldr__grid { grid-template-columns: 1fr 1fr; }
+  .fig--4 .fig__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 @media (max-width: 760px) {
+  .ledger { grid-template-columns: 1fr 1fr; }
+  .builds { grid-template-columns: 1fr; }
+  .about { grid-template-columns: 1fr; }
+  .nav__links { gap: 1rem; }
+  .cs-head .ledger { grid-template-columns: 1fr 1fr; }
+  .ledger--hero { grid-template-columns: 1fr; row-gap: 1.25rem; }
+  .ledger--hero .line { display: inline; }
   .sg-spec { grid-template-columns: 1fr; gap: .35rem; }
   .sg-space { grid-template-columns: minmax(0, 5.5rem) minmax(0, 1fr); }
+}
+
+@media (max-width: 420px) {
+  .ledger, .cs-head .ledger { grid-template-columns: 1fr; }
+  .tldr__grid { grid-template-columns: 1fr; }
+  .fig--3 .fig__grid { grid-template-columns: 1fr; }
+  .plate__cap { flex-direction: column; gap: .15rem; }
 }
