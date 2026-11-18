@@ -154,20 +154,38 @@
     <section class="cs-sec wrap" aria-labelledby="sg5">
       <div class="cs-sec__label"><span class="mono">05</span><h2 id="sg5">Spacing</h2></div>
       <div class="cs-sec__body">
-        <p class="sg-note">Unlike colour and type, spacing has <strong>no tokens</strong>. These are the values hard-coded across styles.css, by frequency. The one-off values near the bottom are where drift creeps in.</p>
+        <p class="sg-note">A fixed scale for component spacing, and a fluid one for the gaps between sections. Every padding, margin and gap in styles.css resolves to one of these.</p>
+        <h3>Fixed</h3>
         <div class="sg-space">
-          <span>1rem · 16px</span><div class="sg-bar" style="width: 1rem;"></div>
-          <span>2.5rem · 40px</span><div class="sg-bar" style="width: 2.5rem;"></div>
-          <span>2rem · 32px</span><div class="sg-bar" style="width: 2rem;"></div>
-          <span>1.5rem · 24px</span><div class="sg-bar" style="width: 1.5rem;"></div>
-          <span>3rem · 48px</span><div class="sg-bar" style="width: 3rem;"></div>
-          <span>1.25rem · 20px</span><div class="sg-bar" style="width: 1.25rem;"></div>
-          <span>.75rem · 12px</span><div class="sg-bar" style="width: .75rem;"></div>
-          <span>.5rem · 8px</span><div class="sg-bar" style="width: .5rem;"></div>
-          <span>3.5rem · 56px</span><div class="sg-bar" style="width: 3.5rem;"></div>
-          <span>4.5rem · 72px</span><div class="sg-bar" style="width: 4.5rem;"></div>
-          <span>.25rem · 4px</span><div class="sg-bar" style="width: .25rem;"></div>
-          <span>4rem · 64px</span><div class="sg-bar" style="width: 4rem;"></div></div>
+          <span>0.125rem · 2px</span><div class="sg-bar" style="width: var(--space-4xs);"></div>
+          <span>0.25rem · 4px</span><div class="sg-bar" style="width: var(--space-3xs);"></div>
+          <span>0.375rem · 6px</span><div class="sg-bar" style="width: var(--space-2xs);"></div>
+          <span>0.5rem · 8px</span><div class="sg-bar" style="width: var(--space-xs);"></div>
+          <span>0.75rem · 12px</span><div class="sg-bar" style="width: var(--space-s);"></div>
+          <span>1rem · 16px</span><div class="sg-bar" style="width: var(--space-m);"></div>
+          <span>1.25rem · 20px</span><div class="sg-bar" style="width: var(--space-l);"></div>
+          <span>1.5rem · 24px</span><div class="sg-bar" style="width: var(--space-xl);"></div>
+          <span>2rem · 32px</span><div class="sg-bar" style="width: var(--space-2xl);"></div>
+          <span>2.5rem · 40px</span><div class="sg-bar" style="width: var(--space-3xl);"></div>
+          <span>3rem · 48px</span><div class="sg-bar" style="width: var(--space-4xl);"></div>
+          <span>4rem · 64px</span><div class="sg-bar" style="width: var(--space-5xl);"></div>
+        </div>
+
+        <h3>Fluid</h3>
+        <p class="sg-note">These scale with the viewport, so the bars below change width as you resize this page.</p>
+        <div class="sg-space">
+          <span>section-xs</span><div class="sg-bar" style="width: var(--space-section-xs);" title="16 → 32px"></div>
+          <span>section-s</span><div class="sg-bar" style="width: var(--space-section-s);" title="32 → 48px"></div>
+          <span>section-m</span><div class="sg-bar" style="width: var(--space-section-m);" title="40 → 56px"></div>
+          <span>section-l</span><div class="sg-bar" style="width: var(--space-section-l);" title="40 → 72px"></div>
+          <span>section-xl</span><div class="sg-bar" style="width: var(--space-section-xl);" title="56 → 96px"></div>
+          <span>hero-gap</span><div class="sg-bar" style="width: var(--space-hero-gap);" title="48 → 128px"></div>
+        </div>
+
+        <h3>Layout</h3>
+        <div class="sg-space">
+          <span>--label-col · 208px</span><div class="sg-bar" style="width: var(--label-col);"></div>
+        </div>
       </div>
     </section>
   </main>
