@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Style guide · Peter Ford</title>
+  <meta name="description" content="The design tokens and components used across peterwford.com.">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://www.peterwford.com/style-guide">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Geist+Mono:wght@400&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script>try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav">
+    <div class="wrap">
+      <a class="nav__logo" href="./" aria-label="Pete Ford, home"><svg width="33" height="28" viewBox="0 0 47 40" aria-hidden="true" focusable="false"><path fill="currentColor" d="M35.25 8.53293C36.8802 8.53293 38.2029 9.82036 38.2029 11.4072C38.2029 12.994 36.8802 14.2814 35.25 14.2814H14.7644C14.7029 14.2814 14.6721 14.3413 14.6721 14.3713V25.7485L14.7531 25.7488C15.2848 25.751 18.3539 25.7635 21.5411 25.7765L22.0197 25.7784C22.0995 25.7788 22.1794 25.7791 22.2591 25.7794L22.7371 25.7814C25.757 25.7937 28.6106 25.8053 29.2234 25.8079L29.3257 25.8083C29.3386 25.8084 29.3449 25.8084 29.3442 25.8084V31.3174C29.3442 31.3473 29.3135 31.4072 29.252 31.4072H14.6721V34.2814C14.6721 37.4252 12.0576 40 8.79712 40V8.68264C8.79712 8.59281 8.85864 8.53293 8.95092 8.53293H35.25ZM35.25 0C41.7402 0 47 5.11976 47 11.4371L46.9984 11.6282C46.8936 17.8574 41.6746 22.8743 35.25 22.8743H17.7173C17.6865 22.8743 17.625 22.8443 17.625 22.7844V17.2754C17.625 17.2455 17.6558 17.1856 17.7173 17.1856H35.25C38.4797 17.1856 41.125 14.6108 41.125 11.4671C41.125 8.32335 38.5105 5.7485 35.25 5.7485H5.96728C5.90576 5.7485 5.875 5.77844 5.875 5.83832V31.4671C2.64529 31.4671 0 28.9222 0 25.7485V1.0479C0 0.479042 0.492147 0 1.07657 0H35.25Z"/></svg></a>
+      <nav aria-label="Main">
+        <ul class="nav__links">
+          <li><a href="./#work">Work</a></li>
+          <li><a href="./#about">About</a></li>
+          <li><a href="./#contact">Contact</a></li>
+          <li><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch between light and dark mode">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="8" r="3.2"/><path d="M8 1v1.6M8 13.4V15M1 8h1.6M13.4 8H15M3.05 3.05l1.13 1.13M11.82 11.82l1.13 1.13M3.05 12.95l1.13-1.13M11.82 4.18l1.13-1.13"/></svg>
+          </button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="cs-head wrap">
+      <a class="back" href="./#work">← All work</a>
+      <p class="eyebrow mono">Internal reference</p>
+      <h1>Style guide</h1>
+      <dl class="ledger">
+        <div><dt>Purpose</dt><dd>Every token and component on one page</dd></div>
+        <div><dt>Source</dt><dd>styles.css, tokens in <span class="sg-inline-token">:root</span></dd></div>
+        <div><dt>Live values</dt><dd>Sizes and colours below are measured from the page, so they follow the theme toggle.</dd></div>
+      </dl>
+    </header>
+
+    <section class="cs-sec wrap" aria-labelledby="sg1">
+      <div class="cs-sec__label"><span class="mono">01</span><h2 id="sg1">Colour</h2></div>
+      <div class="cs-sec__body">
+        <p class="sg-note">Six tokens carry the whole palette. Each is redefined for dark mode twice: once under <code>prefers-color-scheme</code> and once under <code>[data-theme="dark"]</code>. Toggle the theme in the nav and these swatches update.</p>
+        <ul class="sg-grid">
+          <li class="sg-swatch"><div class="sg-swatch__chip" style="background: var(--paper);"></div><p class="sg-swatch__name">Page background<span class="sg-swatch__token">--paper · <span data-token="--paper">…</span></span></p></li>
+          <li class="sg-swatch"><div class="sg-swatch__chip" style="background: var(--ink);"></div><p class="sg-swatch__name">Primary text<span class="sg-swatch__token">--ink · <span data-token="--ink">…</span></span></p></li>
+          <li class="sg-swatch"><div class="sg-swatch__chip" style="background: var(--muted);"></div><p class="sg-swatch__name">Secondary text<span class="sg-swatch__token">--muted · <span data-token="--muted">…</span></span></p></li>
+          <li class="sg-swatch"><div class="sg-swatch__chip" style="background: var(--rule);"></div><p class="sg-swatch__name">Hairlines and borders<span class="sg-swatch__token">--rule · <span data-token="--rule">…</span></span></p></li>
+          <li class="sg-swatch"><div class="sg-swatch__chip" style="background: var(--accent);"></div><p class="sg-swatch__name">Links, numbers, insight<span class="sg-swatch__token">--accent · <span data-token="--accent">…</span></span></p></li>
+          <li class="sg-swatch"><div class="sg-swatch__chip" style="background: var(--plate);"></div><p class="sg-swatch__name">Image placeholders<span class="sg-swatch__token">--plate · <span data-token="--plate">…</span></span></p></li></ul>
+      </div>
+    </section>
+
+    <section class="cs-sec wrap" aria-labelledby="sg2">
+      <div class="cs-sec__label"><span class="mono">02</span><h2 id="sg2">Typefaces</h2></div>
+      <div class="cs-sec__body">
+        <div class="sg-spec">
+          <p class="sg-spec__meta"><b>--display</b>Newsreader</p>
+          <div class="sg-spec__demo" style="font-family: var(--display); font-size: var(--step-2); line-height: 1.3;">Headlines, the About lede and <em>italic accents</em></div>
+        </div>
+        <div class="sg-spec">
+          <p class="sg-spec__meta"><b>--body</b>Geist</p>
+          <div class="sg-spec__demo" style="font-family: var(--body); font-size: var(--step-0);">Body copy, navigation, captions and buttons</div>
+        </div>
+        <div class="sg-spec">
+          <p class="sg-spec__meta"><b>--mono</b>Geist Mono</p>
+          <div class="sg-spec__demo mono">Eyebrows, section numbers and small labels</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-sec wrap" aria-labelledby="sg3">
+      <div class="cs-sec__label"><span class="mono">03</span><h2 id="sg3">Type scale</h2></div>
+      <div class="cs-sec__body">
+        <p class="sg-note">Five <code>--step</code> tokens, plus two sizes the case studies hard-code. Those two are marked in accent: they are the comfortable reading sizes, and they are not in the scale.</p>
+
+        <div class="sg-spec">
+          <p class="sg-spec__meta"><b>--step-3</b>clamp(2rem, 4.2vw, 2.875rem) · <span class="sg-px">…</span><br>.hero h1, .cs-head h1, .contact h2</p>
+          <div class="sg-spec__demo"><span style="font-size: var(--step-3); font-family: var(--display); line-height: 1.15; letter-spacing: -.02em;">Product designer who builds</span></div>
+        </div>
+        <div class="sg-spec">
+          <p class="sg-spec__meta"><b>--step-2</b>1.5rem · <span class="sg-px">…</span><br>.about lede, .email, .cs-sec__label h2, h3</p>
+          <div class="sg-spec__demo"><span style="font-size: var(--step-2); font-family: var(--display); line-height: 1.3;">Product designer who builds</span></div>
+        </div>
+        <div class="sg-spec">
+          <p class="sg-spec__meta"><b>--step-1</b>1.125rem · <span class="sg-px">…</span><br>.lede — 404.html only</p>
+          <div class="sg-spec__demo"><span style="font-size: var(--step-1);">Product designer who builds</span></div>
+        </div>
+        <div class="sg-spec sg-spec--gap">
+          <p class="sg-spec__meta"><b>(none)</b>1.0625rem · <span class="sg-px">…</span><br>hard-coded: .cs-sec__body > p, .insight p</p>
+          <div class="sg-spec__demo"><span style="font-size: 1.0625rem; line-height: 1.65;">Product designer who builds</span></div>
+        </div>
+        <div class="sg-spec sg-spec--gap">
+          <p class="sg-spec__meta"><b>(none)</b>1rem · <span class="sg-px">…</span><br>hard-coded: .cs-sec__body > ul</p>
+          <div class="sg-spec__demo"><span style="font-size: 1rem;">Product designer who builds</span></div>
+        </div>
+        <div class="sg-spec">
+          <p class="sg-spec__meta"><b>--step-0</b>0.9375rem · <span class="sg-px">…</span><br>body, .ledger--hero</p>
+          <div class="sg-spec__demo"><span style="font-size: var(--step-0);">Product designer who builds</span></div>
+        </div>
+        <div class="sg-spec">
+          <p class="sg-spec__meta"><b>--step--1</b>0.8125rem · <span class="sg-px">…</span><br>nav, ledgers, captions, footer, .btn, .tldr dd</p>
+          <div class="sg-spec__demo"><span style="font-size: var(--step--1);">Product designer who builds</span></div>
+        </div>
+        <div class="sg-spec">
+          <p class="sg-spec__meta"><b>.mono</b>0.75rem · <span class="sg-px">…</span><br>eyebrows, section numbers, labels</p>
+          <div class="sg-spec__demo"><span style="font-size: .75rem; font-family: var(--mono);">Product designer who builds</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cs-sec wrap" aria-labelledby="sg4">
+      <div class="cs-sec__label"><span class="mono">04</span><h2 id="sg4">Components</h2></div>
+      <div class="cs-sec__body">
+        <h3>Section head</h3>
+        <div class="sg-demo"><div class="section__head"><h2>Selected work</h2><span class="mono">04 case studies</span></div></div>
+
+        <h3>Ledger</h3>
+        <div class="sg-demo"><dl class="ledger"><div><dt>Role</dt><dd>Sole product designer</dd></div><div><dt>Timeline</dt><dd>2022 – 2024</dd></div><div><dt>Disciplines</dt><dd>Research, UX, UI, prototyping</dd></div></dl></div>
+
+        <h3>Summary grid</h3>
+        <div class="sg-demo"><dl class="tldr__grid"><div><dt>Problem</dt><dd>What was wrong, in one or two sentences.</dd></div><div><dt>My role</dt><dd>What I owned on the project.</dd></div><div><dt>Key insight</dt><dd>The finding that reframed the brief.</dd></div><div><dt>Outcome</dt><dd>What shipped, and what it moved.</dd></div></dl></div>
+
+        <h3>Insight</h3>
+        <aside class="insight"><p class="insight__label mono">Insight</p><p>Pulled-out research finding. Accent left rule, 6% accent wash behind it.</p></aside>
+
+        <h3>Stats</h3>
+        <p class="sg-note">Currently used on the Forms case study only. The other three Outcome sections have no metrics yet.</p>
+        <div class="sg-demo"><div class="stats"><div class="stat"><span class="stat__n">8.4%</span><span class="stat__l">Increase in event requests in the A/B test</span></div><div class="stat"><span class="stat__n">94</span><span class="stat__l">Services the new flow rolled out to</span></div></div></div>
+
+        <h3>Buttons and links</h3>
+        <div class="sg-demo">
+          <div class="contact__row">
+            <button class="btn" type="button">Copy email</button>
+            <a class="doclink" href="#sg4">A document link</a>
+            <a class="back" href="#sg4" style="margin: 0;">← A back link</a>
+          </div>
+        </div>
+
+        <h3>Work plate</h3>
+        <div class="sg-demo">
+          <a class="plate" href="#sg4">
+            <div class="plate__img"><img src="assets/img/home/forms.webp" srcset="assets/img/home/forms-1000.webp 1000w, assets/img/home/forms.webp 2000w" sizes="(min-width: 68rem) 40rem, 100vw" width="2000" height="1333" alt="" loading="lazy" decoding="async"></div>
+            <div class="plate__cap"><span><strong>Forms</strong><span class="sep">/</span><span class="sub">The caption pattern used on every plate</span></span><span class="mono sub">Add to Event</span></div>
+          </a>
+        </div>
+
+        <h3>Figure captions</h3>
+        <p class="sg-note"><code>.fig--2</code>, <code>.fig--4</code> and <code>.fig--video</code> are in use. <code>.fig--3</code> is defined in the CSS but never used, and <code>.fig--1</code> is used 29 times but has no rule at all, since a single-column grid is already the default.</p>
+        <figure class="fig fig--2" style="margin-left: 0;"><div class="fig__grid"><div class="fig__cell"><img src="assets/img/home/organiser-dashboard-1000.webp" width="1000" height="750" alt="" loading="lazy" decoding="async"></div><div class="fig__cell"><img src="assets/img/home/refer-a-friend-1000.webp" width="1000" height="667" alt="" loading="lazy" decoding="async"></div></div><figcaption>A two-up figure with its caption</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="cs-sec wrap" aria-labelledby="sg5">
+      <div class="cs-sec__label"><span class="mono">05</span><h2 id="sg5">Spacing</h2></div>
+      <div class="cs-sec__body">
+        <p class="sg-note">Unlike colour and type, spacing has <strong>no tokens</strong>. These are the values hard-coded across styles.css, by frequency. The one-off values near the bottom are where drift creeps in.</p>
+        <div class="sg-space">
+          <span>1rem · 16px</span><div class="sg-bar" style="width: 1rem;"></div>
+          <span>2.5rem · 40px</span><div class="sg-bar" style="width: 2.5rem;"></div>
+          <span>2rem · 32px</span><div class="sg-bar" style="width: 2rem;"></div>
+          <span>1.5rem · 24px</span><div class="sg-bar" style="width: 1.5rem;"></div>
+          <span>3rem · 48px</span><div class="sg-bar" style="width: 3rem;"></div>
+          <span>1.25rem · 20px</span><div class="sg-bar" style="width: 1.25rem;"></div>
+          <span>.75rem · 12px</span><div class="sg-bar" style="width: .75rem;"></div>
+          <span>.5rem · 8px</span><div class="sg-bar" style="width: .5rem;"></div>
+          <span>3.5rem · 56px</span><div class="sg-bar" style="width: 3.5rem;"></div>
+          <span>4.5rem · 72px</span><div class="sg-bar" style="width: 4.5rem;"></div>
+          <span>.25rem · 4px</span><div class="sg-bar" style="width: .25rem;"></div>
+          <span>4rem · 64px</span><div class="sg-bar" style="width: 4rem;"></div></div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="wrap">
+      <span>© 2026 Peter Ford</span>
+      <ul>
+        <li><a href="mailto:hello@peterwford.com">hello@peterwford.com</a></li>
+        <li><a href="https://www.linkedin.com/in/peterwford/">LinkedIn</a></li>
+        <li><a href="https://dribbble.com/pete_ford27">Dribbble</a></li>
+        <li><a href="https://www.instagram.com/petewford/">Instagram</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <script>
+  // Living values: measure what the page actually renders, so nothing goes stale.
+  // Re-runs on theme change, so the colours below always match what you see.
+  (function () {
+    var root = document.documentElement;
+
+    function sync() {
+      var cs = getComputedStyle(root);
+      document.querySelectorAll("[data-token]").forEach(function (el) {
+        var v = cs.getPropertyValue(el.dataset.token).trim();
+        if (v) el.textContent = v;
+      });
+      document.querySelectorAll(".sg-spec__demo").forEach(function (demo) {
+        var row = demo.closest(".sg-spec");
+        var slot = row && row.querySelector(".sg-px");
+        if (!slot) return;
+        var px = parseFloat(getComputedStyle(demo.firstElementChild || demo).fontSize);
+        slot.textContent = Math.round(px * 10) / 10 + "px";
+      });
+    }
+
+    sync();
+    // The toggle flips data-theme on <html>; watch for it.
+    new MutationObserver(sync).observe(root, { attributes: true, attributeFilter: ["data-theme"] });
+    // And follow the OS when no explicit choice has been made.
+    var mq = window.matchMedia("(prefers-color-scheme: dark)");
+    if (mq.addEventListener) mq.addEventListener("change", sync);
+    // Re-measure once webfonts land, in case metrics shift the clamp() sizes.
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(sync);
+  })();
+  </script>
+</body>
+</html>
